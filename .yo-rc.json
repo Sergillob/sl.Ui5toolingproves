@@ -1,0 +1,16 @@
+{
+  "generator-easy-ui5": {
+    "projectname": "Ui5toolingproves",
+    "namespace": "sl",
+    "platform": "SAP NetWeaver",
+    "viewtype": "XML",
+    "viewname": "Main",
+    "ui5libs": "Content delivery network (SAPUI5)",
+    "newdir": true,
+    "namespaceURI": "sl",
+    "uimodules": [
+      "uimodule"
+    ],
+    "setupCompleted": true
+  }
+}
