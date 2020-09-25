@@ -8,8 +8,19 @@
       "version": "1.0.0"
     },
     "title": "{{appTitle}}",
-    "description": "{{appDescription}}"
+    "description": "{{appDescription}}",
+
+    "dataSources": {
+      "mainService": {
+        "uri": "/sap/opu/odata/sap/ZCDSPM_NO_03_CDS/",
+        "type": "OData",
+        "settings": {
+          "localUri": "localService/ZCDSPM_NO_03_CDS/metadata.xml"
+        }
+      }
+    }
   },
+  
   "sap.ui": {
     "technology": "UI5",
     "icons": {
@@ -51,7 +62,17 @@
         "settings": {
           "bundleName": "sl.Ui5toolingproves.i18n.i18n"
         }
-      }
+      },
+      "": {
+				"type": "sap.ui.model.odata.v2.ODataModel",
+				"settings": {
+					"defaultOperationMode": "Server",
+					"defaultBindingMode": "OneWay",
+					"defaultCountMode": "Request"
+				},
+				"dataSource": "mainService",
+				"preload": true
+			}
     },
     "resources": {
       "css": [

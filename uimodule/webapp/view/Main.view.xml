@@ -1,11 +1,17 @@
- <mvc:View controllerName="sl.Ui5toolingproves.controller.Main"
-  displayBlock="true"
+<mvc:View controllerName="sl.Ui5toolingproves.controller.Main" displayBlock="true"
   xmlns="sap.m"
   xmlns:mvc="sap.ui.core.mvc">
-  <App id="idAppControl" >
+  <App id="idAppControl">
     <pages>
       <Page title="{i18n>title}">
-        <content></content>
+        <content>
+          <List headerText="Ordenes" items="{
+              path: '/ZCDSPM_NO_03'
+            }">
+            <StandardListItem title="{aufnr}" />
+          </List>
+
+        </content>
       </Page>
     </pages>
   </App>

@@ -26,11 +26,12 @@ server:
       configuration:
         debug: false
         /sap/opu/odata/sap/:
-          target: http://<yourserver>:<yourserverport>
+          target: https://spsapfesos01.viscofan.group:44301
           auth:
-            fromEnv: false
-            user: <youruser>
-            pass: <yourpassword>
+            fromEnv: true
+            user: UI5_USERNAME
+            pass: UI5_PASSWORD
+            client: 100
 builder:
   customTasks:
   - name: ui5-task-nwabap-deployer
@@ -40,14 +41,14 @@ builder:
         path: dist/uimodule
         pattern: "**/*.*"
       connection:
-        server: http://<yourserver>:<yourserverport>
+        server: https://spsapfesos01.viscofan.group:44301
       authentication:
-        user: <youruser>
-        password: <yourpassword>
+        user: desarrollo  
+        password: Inicial.02
       ui5:
         language: EN
-        package: <yourpackage>
-        bspContainer: <yourbspapplication>
+        package: $TMP
+        bspContainer: zproves_ui5t
         bspContainerText: Generated with easy-ui5
         transportNo: <yourtransport>
         calculateApplicationIndex: true
